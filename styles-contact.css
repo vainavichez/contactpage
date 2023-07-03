@@ -68,7 +68,7 @@ html, body {
 .center {
     width: 80%;
 	padding: 2%;
-    margin: 100px auto;
+    margin: 30px auto;
  	 /*this uses opacity of 75% for the background color*/
 	text-align: center;
 	border: 4px dashed white;
@@ -111,11 +111,12 @@ p {
 nav {
 	font-family: 'Ubuntu', sans-serif;
 	font-size: 1.2em;
-	width: 60%;
+	width: 100%;
 	margin: 0 auto;
 	border: dashed red;
 	margin-top: 2em;
 	text-align: center;
+	background-color: hotpink;
 }
 
 nav li {
@@ -128,7 +129,7 @@ nav a {
 }
 
 nav a {
-	color: #444;
+	color: black;
 	text-decoration: none;
 	
 }
@@ -148,3 +149,87 @@ nav a:hover {
 	line-height:1.5em;
 	}
 }
+
+/* Code for cards */
+
+/* sets everything to zero */
+
+* {
+    margin: 0;
+    padding: 0;
+  }
+ 
+  .cardphoto img {
+    display: block;
+    max-width: 100%; /* makes image responsive if needed but makes sure it doesn't stretch */
+  }
+ 
+  /* make the Section class cards here.  */
+ 
+  .cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+  }
+ 
+  /* make the card flex. The default is row so change flex direction to vertical. */
+  .card {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    min-width: 250px;
+    max-width: 350px;
+    border-radius: 0.5rem;
+    border-style: solid;
+    border-width: 1px;
+    border-color: gray;
+    box-shadow: 0 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+    top: 0;
+  }
+  .card:hover {
+    transition: all 0.1s ease-in;
+    top: -2px;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+  }
+ 
+  .cardphoto {
+    max-height: 250px;
+    overflow: hidden;
+  }
+ 
+  .cardarticle {
+    padding: 2.5rem;
+    flex-grow: 1;
+  }
+ 
+  /* typography */
+  .cardH1 {
+    font-size: 2rem;
+    margin: 0;
+    color: gray;
+  }
+ 
+  .card p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+ 
+  .card footer {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #999;
+    text-transform: uppercase;
+    margin: 0;
+    text-align: center;
+  }
+
+  h3{
+      color:#444;
+  }
+ 
+  .card p {
+      color: grey;
+  }
