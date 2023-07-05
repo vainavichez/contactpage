@@ -85,56 +85,56 @@ html, body {
 h1 {
 	/* FONT-FAMILY GOES HERE CHOOSE FROM TYPEKIT OR GOOGLE FONTS */
 	font-size: 2em;
-	font-family: 'Ubuntu', sans-serif;
-    margin: 0px auto 10px auto;
-    color: black;
+	font-family: 'Mukta', sans-serif;
+  margin: 0px auto 10px auto;
+  color: black;
 }
 
 h2 {
 	 /* FONT-FAMILY GOES HERE CHOOSE FROM TYPEKIT OR GOOGLE FONTS */
 	font-size: 1.5em;
-	font-family: 'Ubuntu', sans-serif;
-    line-height: 1.4;
-    color: black;
-    padding: 0px 0px;
-    margin: 0px auto 25px auto;
+	font-family: 'Mukta', sans-serif;
+  line-height: 1.4;
+  color: black;
+  padding: 0px 0px;
+  margin: 0px auto 25px auto;
 }
 
 p {
 	/* FONT-FAMILY GOES HERE CHOOSE FROM TYPEKIT OR GOOGLE FONTS */
 	font-size: 1.2em;
-	font-family: 'Ubuntu', sans-serif;
-    line-height: 1.6;
-    color: black;
+	font-family: 'Mukta', sans-serif;
+  line-height: 1.6;
+  color: black;
 }
 
-nav {
-	font-family: 'Ubuntu', sans-serif;
-	font-size: 1.2em;
-	width: 100%;
-	margin: 0 auto;
-	border: dashed red;
-	margin-top: 2em;
-	text-align: center;
+.main-header {
 	background-color: hotpink;
+  padding: 5px 40px 10px 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;  
 }
 
-nav li {
-		display: inline;
+.main-nav {
+	display: flex;
 }
 
-nav a {
-	display: inline-block;
-	padding: 10px;
+.main-nav a {
+  text-decoration: none;
+  color: inherit
+  }
+
+.main-nav a {
+	text-align: center;
+  display: inline-block;
+  padding: 10px 15px;
+  font-size: .95em;
+  color: black;
+  text-transform: uppercase;
 }
 
-nav a {
-	color: black;
-	text-decoration: none;
-	
-}
-
-nav a:hover {
+.main-nav a:hover {
 	color: black;
 	background: pink;
 }
@@ -208,8 +208,8 @@ nav a:hover {
   /* typography */
   .cardH1 {
     font-size: 2rem;
-    margin: 0;
-    color: gray;
+    margin: 10px auto;
+    color: palevioletred;
   }
  
   .card p {
@@ -217,10 +217,10 @@ nav a:hover {
     line-height: 1.5;
   }
  
-  .card footer {
+  .cardfooter {
     font-size: 1.2rem;
     font-weight: bold;
-    color: #999;
+    color: black;
     text-transform: uppercase;
     margin: 0;
     text-align: center;
@@ -233,3 +233,26 @@ nav a:hover {
   .card p {
       color: grey;
   }
+
+  @mixin clearfix {
+    &:after {
+    display: table;
+    clear: both;
+    }
+  }
+
+  @media (min-width: 1025px) {
+    .main-header {
+    flex-direction: row;
+    justify-content: flex-end;
+    }
+  }
+
+footer a {
+  text-decoration: none;
+  color: inherit
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
